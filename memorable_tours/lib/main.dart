@@ -16,10 +16,33 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: CircularProgressIndicator(),
+    return MaterialApp(
+      home: FutureBuilder<bool>(
+        future: _checkFirstTime(),
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.done) {
+            final bool isFirstTime = snapshot.data ?? true;
+
+            if (isFirstTime) {
+              return OnboardingScreen();
+            } else {
+              return OnboardingScreen();
+            }
+          } else {
+            return Scaffold(
+              body: Center(
+                child: CircularProgressIndicator(),
+              ),
+            );
+          }
+        },
       ),
     );
+  }
+
+  Future<bool> _checkFirstTime() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    bool isFirstTime = prefs.getBool('isFirstTime') ?? false;
+    return isFirstTime;
   }
 }
