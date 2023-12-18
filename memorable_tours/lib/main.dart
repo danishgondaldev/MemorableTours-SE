@@ -24,9 +24,10 @@ class MyApp extends StatelessWidget {
             final bool isFirstTime = snapshot.data ?? true;
 
             if (isFirstTime) {
-              return OnboardingScreen();
+              //return OnboardingScreen();
+              return HomeScreen();
             } else {
-              return OnboardingScreen();
+              return HomeScreen();
             }
           } else {
             return Scaffold(
