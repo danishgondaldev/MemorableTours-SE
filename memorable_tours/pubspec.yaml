@@ -87,5 +87,8 @@ flutter:
     - family: Epilogue
       fonts:
         - asset: assets/fonts/Epilogue-Regular.ttf
+    - family: Epilogue-Bold
+      fonts:
+        - asset: assets/fonts/Epilogue-Bold.ttf
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
