@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:memorable_tours/Screens/signup_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'home_page.dart';
 
@@ -34,7 +35,7 @@ class OnboardingScreen extends StatelessWidget {
     // Navigate to the main screen or any other screen you want to show after onboarding
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => HomeScreen()),
+      MaterialPageRoute(builder: (context) => SignupScreen()),
     );
   }
 }
