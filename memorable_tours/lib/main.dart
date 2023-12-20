@@ -4,16 +4,13 @@ import 'package:memorable_tours/Screens/location_description.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'Screens/onboarding_page.dart';
 import 'Screens/home_page.dart';
-import 'package:firebase_core/firebase_core.dart';
 
-void main() async {
+void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
     statusBarColor: Colors.transparent,
     statusBarIconBrightness: Brightness.light,
   ));
 
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
