@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:memorable_tours/Google%20Auth/google_auth.dart';
 import 'package:memorable_tours/Screens/email_verification.dart';
 import 'package:memorable_tours/Screens/home_page.dart';
 
@@ -81,8 +82,18 @@ class SignupScreen extends StatelessWidget {
             ),
             SizedBox(height: 0.0),
             ElevatedButton.icon(
-              onPressed: () {
-                // Add your Google login logic here
+              onPressed: () async {
+                GoogleAuthService authService = GoogleAuthService();
+                User? user = await authService.signUpWithGoogle();
+                if (user != null) {
+                  // Google Sign-Up successful, navigate to the desired screen
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => HomeScreen()),
+                  );
+                } else {
+                  // Google Sign-Up failed, handle accordingly
+                }
               },
               icon: Image.asset(
                 'assets/images/google.png',

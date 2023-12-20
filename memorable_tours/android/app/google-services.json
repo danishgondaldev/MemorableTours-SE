@@ -12,7 +12,20 @@
           "package_name": "com.example.memorable_tours"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "194939292057-61k3441f0uugs4mpp3lv7oc18lahh67l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.memorable_tours",
+            "certificate_hash": "6fc645bf2cc8c794babec93665daa18e6dce6820"
+          }
+        },
+        {
+          "client_id": "194939292057-tvehhgj0e140vsvjr7tih8gq4suoi6n2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyBID53aHOX3Mz7uMRRBjdEuhgkLSJu0wnQ"
@@ -20,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "194939292057-tvehhgj0e140vsvjr7tih8gq4suoi6n2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

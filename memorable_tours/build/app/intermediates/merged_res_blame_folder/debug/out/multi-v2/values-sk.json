@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.memorable_tours.app-mergeDebugResources-14:/values-sk/values-sk.xml",
+            "outputFile": "com.example.memorable_tours.app-mergeDebugResources-15:/values-sk/values-sk.xml",
             "map": [
                 {
                     "source": "C:\\Users\\hp\\.gradle\\caches\\transforms-3\\c26ff1585b6e62371e5014007c931536\\transformed\\jetified-play-services-base-18.0.1\\res\\values-sk\\values.xml",
@@ -38,23 +38,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\hp\\.gradle\\caches\\transforms-3\\704522cf73176455863394a24adf3791\\transformed\\jetified-play-services-basement-18.1.0\\res\\values-sk\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "195",
-                        "endColumns": "134",
-                        "endOffsets": "329"
-                    },
-                    "to": {
-                        "startLines": "10",
-                        "startColumns": "4",
-                        "startOffsets": "1054",
-                        "endColumns": "138",
-                        "endOffsets": "1188"
-                    }
-                },
-                {
                     "source": "C:\\Users\\hp\\.gradle\\caches\\transforms-3\\1a8dff90858292ad88d877c1b7547950\\transformed\\browser-1.4.0\\res\\values-sk\\values-sk.xml",
                     "from": {
                         "startLines": "2,3,4,5",
@@ -69,6 +52,23 @@
                         "startOffsets": "2322,2429,2532,2647",
                         "endColumns": "106,102,114,101",
                         "endOffsets": "2424,2527,2642,2744"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\hp\\.gradle\\caches\\transforms-3\\3cda1c4714f6fe45e6b245c2a443c613\\transformed\\jetified-play-services-basement-18.2.0\\res\\values-sk\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "195",
+                        "endColumns": "134",
+                        "endOffsets": "329"
+                    },
+                    "to": {
+                        "startLines": "10",
+                        "startColumns": "4",
+                        "startOffsets": "1054",
+                        "endColumns": "138",
+                        "endOffsets": "1188"
                     }
                 }
             ]

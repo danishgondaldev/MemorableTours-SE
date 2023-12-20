@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.memorable_tours.app-mergeDebugResources-14:/values-v21/values-v21.xml",
+            "outputFile": "com.example.memorable_tours.app-mergeDebugResources-15:/values-v21/values-v21.xml",
             "map": [
                 {
                     "source": "C:\\Users\\hp\\.gradle\\caches\\transforms-3\\c021124fbcb0460f91807b1aedc4d4de\\transformed\\core-1.6.0\\res\\values-v21\\values-v21.xml",
