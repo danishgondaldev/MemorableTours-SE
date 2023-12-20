@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:memorable_tours/Screens/email_verification.dart';
 import 'package:memorable_tours/Screens/location_description.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'Screens/onboarding_page.dart';
@@ -25,10 +26,11 @@ class MyApp extends StatelessWidget {
             final bool isFirstTime = snapshot.data ?? true;
 
             if (isFirstTime) {
-              //return OnboardingScreen();
-              return HomeScreen();
+              return OnboardingScreen();
             } else {
-              return HomeScreen();
+              //return OnboardingScreen();
+              //return OnboardingScreen();
+              return EmailVerificationScreen();
             }
           } else {
             return Scaffold(
