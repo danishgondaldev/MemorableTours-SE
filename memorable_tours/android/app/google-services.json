@@ -1,13 +1,23 @@
 {
   "project_info": {
+<<<<<<< Updated upstream
     "project_number": "65641677499",
     "project_id": "memorable-tours",
     "storage_bucket": "memorable-tours.appspot.com"
+=======
+    "project_number": "194939292057",
+    "project_id": "memorable-tours-83290",
+    "storage_bucket": "memorable-tours-83290.appspot.com"
+>>>>>>> Stashed changes
   },
   "client": [
     {
       "client_info": {
+<<<<<<< Updated upstream
         "mobilesdk_app_id": "1:65641677499:android:0bfc69cbfbd03b53711f9e",
+=======
+        "mobilesdk_app_id": "1:194939292057:android:0bbf311e87fa8e3123ab08",
+>>>>>>> Stashed changes
         "android_client_info": {
           "package_name": "com.example.memorable_tours"
         }
@@ -15,7 +25,11 @@
       "oauth_client": [],
       "api_key": [
         {
+<<<<<<< Updated upstream
           "current_key": "AIzaSyBwChAMM_jjT5YUYkFjV_UkelVkXF3Hu3M"
+=======
+          "current_key": "AIzaSyBID53aHOX3Mz7uMRRBjdEuhgkLSJu0wnQ"
+>>>>>>> Stashed changes
         }
       ],
       "services": {
