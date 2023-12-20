@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.memorable_tours.app-mergeDebugResources-15:/values-af/values-af.xml",
+            "outputFile": "com.example.memorable_tours.app-mergeDebugResources-16:/values-af/values-af.xml",
             "map": [
                 {
                     "source": "C:\\Users\\hp\\.gradle\\caches\\transforms-3\\1a8dff90858292ad88d877c1b7547950\\transformed\\browser-1.4.0\\res\\values-af\\values-af.xml",

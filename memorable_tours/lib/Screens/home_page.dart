@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:geocoding/geocoding.dart' as geocoding;
+import 'package:location/location.dart' as location_package;
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -6,12 +8,44 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int _selectedButtonIndex = -1; // Index of the selected button
+  int _selectedButtonIndex = -1;
+  late location_package.Location _location; // Rename the variable
+
+  String _currentLocation = ''; // To store the current city and country
 
   @override
+  void initState() {
+    super.initState();
+    _location = location_package.Location(); // Rename the variable
+    _getCurrentLocation();
+  }
+
+  Future<void> _getCurrentLocation() async {
+    try {
+      location_package.LocationData currentLocation =
+          await _location.getLocation();
+      List<geocoding.Placemark> placemarks =
+          await geocoding.placemarkFromCoordinates(
+        currentLocation.latitude!,
+        currentLocation.longitude!,
+        localeIdentifier: 'en_US', // Set your preferred locale
+      );
+
+      if (placemarks.isNotEmpty) {
+        geocoding.Placemark placemark = placemarks[0];
+        setState(() {
+          _currentLocation = '${placemark.locality}, ${placemark.country}';
+        });
+      }
+    } catch (e) {
+      print('Error getting current location: $e');
+    }
+  }
+
+  /* @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xFFF2F2F2),
+      backgroundColor: Color(0xFFF2F2F2),
       body: Padding(
         padding: EdgeInsets.only(top: 60.0, left: 16.0, right: 0.0),
         child: Column(
@@ -32,8 +66,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 SizedBox(width: 12.0),
+                // Text which shows current location of user
                 Text(
-                  'Lahore, Pakistan',
+                  _currentLocation.isNotEmpty
+                      ? _currentLocation
+                      : 'Fetching location...',
                   style: TextStyle(
                     fontSize: 18.0,
                     fontFamily: 'Epilogue',
@@ -62,10 +99,86 @@ class _HomeScreenState extends State<HomeScreen> {
             Text(
               'Hello, Abdur',
               style: TextStyle(
-                  fontSize: 32.0,
-                  fontFamily: 'Epilogue-Bold',
-                  //fontWeight: FontWeight.bold
-                 ),
+                fontSize: 32.0,
+                fontFamily: 'Epilogue-Bold',
+                //fontWeight: FontWeight.bold
+              ),
+            ),
+            SizedBox(height: 5),
+            Text(
+              'Where would you like to go?',
+              style: TextStyle(
+                  fontSize: 16.0,
+                  color: Colors.black,
+                  fontFamily: 'Epilogue'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+*/
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Color(0xFFF2F2F2),
+      body: Padding(
+        padding: EdgeInsets.only(top: 60.0, left: 16.0, right: 0.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Container(
+                  width: 40.0,
+                  height: 40.0,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(8.0),
+                    border: Border.all(color: Colors.black),
+                  ),
+                  child: Center(
+                    child: Icon(Icons.location_on, color: Colors.black),
+                  ),
+                ),
+                SizedBox(width: 12.0),
+                //Text which shows current location of user
+                Text(
+                  _currentLocation.isNotEmpty
+                      ? _currentLocation
+                      : 'Fetching location...',
+                  style: TextStyle(
+                    fontSize: 18.0,
+                    fontFamily: 'Epilogue',
+                    //fontWeight: FontWeight.w500
+                  ),
+                ),
+                Spacer(),
+                Padding(
+                  padding: EdgeInsets.only(right: 16.0),
+                  child: Container(
+                    width: 40.0,
+                    height: 40.0,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(8.0),
+                      border: Border.all(color: Colors.black),
+                    ),
+                    child: Center(
+                      child: Icon(Icons.person, color: Colors.black),
+                    ),
+                  ),
+                )
+              ],
+            ),
+            SizedBox(height: 20.0),
+            Text(
+              'Hello, Abdur',
+              style: TextStyle(
+                fontSize: 32.0,
+                fontFamily: 'Epilogue-Bold',
+                //fontWeight: FontWeight.bold
+              ),
             ),
             SizedBox(height: 5),
             Text(
@@ -82,25 +195,30 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Colors.black, // Set the color of selected icons
-        unselectedItemColor: Colors.black.withOpacity(1), // Set the color of unselected icons
-        currentIndex: 0, // Set the default selected index (0 for Home in this case)
+        unselectedItemColor:
+            Colors.black.withOpacity(1), // Set the color of unselected icons
+        currentIndex:
+            0, // Set the default selected index (0 for Home in this case)
         showSelectedLabels: true, // Show labels for the selected icon
         showUnselectedLabels: false, // Hide labels for unselected icons
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home_outlined,size: 30),
+            icon: Icon(Icons.home_outlined, size: 30),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.explore_outlined,size: 30),
+            icon: Icon(Icons.explore_outlined, size: 30),
             label: 'Explore',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.bookmark_border,size: 30,),
+            icon: Icon(
+              Icons.bookmark_border,
+              size: 30,
+            ),
             label: 'Bookmarks',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person_outlined,size: 30),
+            icon: Icon(Icons.person_outlined, size: 30),
             label: 'Profile',
           ),
         ],
@@ -110,7 +228,6 @@ class _HomeScreenState extends State<HomeScreen> {
           // For example: setState(() { currentIndex = index; });
         },
       ),
-
     );
   }
 
@@ -148,18 +265,21 @@ class _HomeScreenState extends State<HomeScreen> {
                   side: BorderSide(color: Colors.black),
                 ),
               ),
-              child: Text(buttonTexts[index],
-              style: TextStyle(
-                fontFamily: 'Epilogue',
-                fontWeight: FontWeight.w500,
-                fontSize: 15,
-              ),),
+              child: Text(
+                buttonTexts[index],
+                style: TextStyle(
+                  fontFamily: 'Epilogue',
+                  fontWeight: FontWeight.w500,
+                  fontSize: 15,
+                ),
+              ),
             ),
           );
         }),
       ),
     );
   }
+
   Widget buildImageList() {
     // List of image paths and corresponding texts
     List<Map<String, String>> imagesWithText = [
@@ -223,8 +343,4 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
-
-
-
-
 }
