@@ -1,13 +1,20 @@
-com.example.memorable_tours.app-jetified-window-java-1.0.0-beta04-0 C:\Users\hp\.gradle\caches\transforms-3\006d93cd422dbc43e89591147c2de572\transformed\jetified-window-java-1.0.0-beta04\res
-com.example.memorable_tours.app-core-1.6.0-1 C:\Users\hp\.gradle\caches\transforms-3\4ca28c4a71705f8a687c69dda140a277\transformed\core-1.6.0\res
-com.example.memorable_tours.app-jetified-annotation-experimental-1.1.0-2 C:\Users\hp\.gradle\caches\transforms-3\8965c941cf4bee4d72541b965c7c9d39\transformed\jetified-annotation-experimental-1.1.0\res
-com.example.memorable_tours.app-jetified-window-1.0.0-beta04-3 C:\Users\hp\.gradle\caches\transforms-3\dee59bb480020f42d53c2ea15e4501f7\transformed\jetified-window-1.0.0-beta04\res
-com.example.memorable_tours.app-debug-4 D:\CS 5th Semester\SE Lab\SE Project\Github Repo\memorable_tours\android\app\src\debug\res
-com.example.memorable_tours.app-main-5 D:\CS 5th Semester\SE Lab\SE Project\Github Repo\memorable_tours\android\app\src\main\res
-com.example.memorable_tours.app-pngs-6 D:\CS 5th Semester\SE Lab\SE Project\Github Repo\memorable_tours\build\app\generated\res\pngs\debug
-com.example.memorable_tours.app-resValues-7 D:\CS 5th Semester\SE Lab\SE Project\Github Repo\memorable_tours\build\app\generated\res\resValues\debug
-com.example.memorable_tours.app-rs-8 D:\CS 5th Semester\SE Lab\SE Project\Github Repo\memorable_tours\build\app\generated\res\rs\debug
-com.example.memorable_tours.app-mergeDebugResources-9 D:\CS 5th Semester\SE Lab\SE Project\Github Repo\memorable_tours\build\app\intermediates\incremental\debug\mergeDebugResources\merged.dir
-com.example.memorable_tours.app-mergeDebugResources-10 D:\CS 5th Semester\SE Lab\SE Project\Github Repo\memorable_tours\build\app\intermediates\incremental\debug\mergeDebugResources\stripped.dir
-com.example.memorable_tours.app-merged_res-11 D:\CS 5th Semester\SE Lab\SE Project\Github Repo\memorable_tours\build\app\intermediates\merged_res\debug
-com.example.memorable_tours.app-packaged_res-12 D:\CS 5th Semester\SE Lab\SE Project\Github Repo\memorable_tours\build\shared_preferences_android\intermediates\packaged_res\debug
+com.example.memorable_tours.app-browser-1.4.0-0 C:\Users\hp\.gradle\caches\transforms-3\1a8dff90858292ad88d877c1b7547950\transformed\browser-1.4.0\res
+com.example.memorable_tours.app-jetified-window-1.0.0-beta04-1 C:\Users\hp\.gradle\caches\transforms-3\6eadf545053949834256d1d6917dcdeb\transformed\jetified-window-1.0.0-beta04\res
+com.example.memorable_tours.app-jetified-play-services-basement-18.1.0-2 C:\Users\hp\.gradle\caches\transforms-3\704522cf73176455863394a24adf3791\transformed\jetified-play-services-basement-18.1.0\res
+com.example.memorable_tours.app-jetified-window-java-1.0.0-beta04-3 C:\Users\hp\.gradle\caches\transforms-3\85ff84f3570a2e16e7c91c5fdfa2169b\transformed\jetified-window-java-1.0.0-beta04\res
+com.example.memorable_tours.app-jetified-firebase-common-20.4.2-4 C:\Users\hp\.gradle\caches\transforms-3\9fe38405c8b6432594281d4b712ac02a\transformed\jetified-firebase-common-20.4.2\res
+com.example.memorable_tours.app-jetified-annotation-experimental-1.1.0-5 C:\Users\hp\.gradle\caches\transforms-3\acc8a1c43eb4ffe748c334855bc5e433\transformed\jetified-annotation-experimental-1.1.0\res
+com.example.memorable_tours.app-core-1.6.0-6 C:\Users\hp\.gradle\caches\transforms-3\c021124fbcb0460f91807b1aedc4d4de\transformed\core-1.6.0\res
+com.example.memorable_tours.app-jetified-play-services-base-18.0.1-7 C:\Users\hp\.gradle\caches\transforms-3\c26ff1585b6e62371e5014007c931536\transformed\jetified-play-services-base-18.0.1\res
+com.example.memorable_tours.app-debug-8 D:\CS 5th Semester\SE Lab\SE Project\Github Repo\memorable_tours\android\app\src\debug\res
+com.example.memorable_tours.app-main-9 D:\CS 5th Semester\SE Lab\SE Project\Github Repo\memorable_tours\android\app\src\main\res
+com.example.memorable_tours.app-google-services-10 D:\CS 5th Semester\SE Lab\SE Project\Github Repo\memorable_tours\build\app\generated\res\google-services\debug
+com.example.memorable_tours.app-pngs-11 D:\CS 5th Semester\SE Lab\SE Project\Github Repo\memorable_tours\build\app\generated\res\pngs\debug
+com.example.memorable_tours.app-resValues-12 D:\CS 5th Semester\SE Lab\SE Project\Github Repo\memorable_tours\build\app\generated\res\resValues\debug
+com.example.memorable_tours.app-rs-13 D:\CS 5th Semester\SE Lab\SE Project\Github Repo\memorable_tours\build\app\generated\res\rs\debug
+com.example.memorable_tours.app-mergeDebugResources-14 D:\CS 5th Semester\SE Lab\SE Project\Github Repo\memorable_tours\build\app\intermediates\incremental\debug\mergeDebugResources\merged.dir
+com.example.memorable_tours.app-mergeDebugResources-15 D:\CS 5th Semester\SE Lab\SE Project\Github Repo\memorable_tours\build\app\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+com.example.memorable_tours.app-merged_res-16 D:\CS 5th Semester\SE Lab\SE Project\Github Repo\memorable_tours\build\app\intermediates\merged_res\debug
+com.example.memorable_tours.app-packaged_res-17 D:\CS 5th Semester\SE Lab\SE Project\Github Repo\memorable_tours\build\firebase_auth\intermediates\packaged_res\debug
+com.example.memorable_tours.app-packaged_res-18 D:\CS 5th Semester\SE Lab\SE Project\Github Repo\memorable_tours\build\firebase_core\intermediates\packaged_res\debug
+com.example.memorable_tours.app-packaged_res-19 D:\CS 5th Semester\SE Lab\SE Project\Github Repo\memorable_tours\build\shared_preferences_android\intermediates\packaged_res\debug

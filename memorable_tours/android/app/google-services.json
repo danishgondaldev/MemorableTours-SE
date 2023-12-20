@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "194939292057",
+    "project_id": "memorable-tours-83290",
+    "storage_bucket": "memorable-tours-83290.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:194939292057:android:0bbf311e87fa8e3123ab08",
+        "android_client_info": {
+          "package_name": "com.example.memorable_tours"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBID53aHOX3Mz7uMRRBjdEuhgkLSJu0wnQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
