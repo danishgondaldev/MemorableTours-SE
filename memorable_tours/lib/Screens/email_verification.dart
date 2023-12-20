@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:memorable_tours/Screens/home_page.dart';
 
 class EmailVerificationScreen extends StatelessWidget {
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,7 +39,7 @@ class EmailVerificationScreen extends StatelessWidget {
               'A verification link has been sent to your email. Please check your inbox and click on the link to complete the verification process.',
               style: TextStyle(
                   fontSize: 16.0,
-                fontFamily: 'Epilogue'
+                  fontFamily: 'Epilogue'
               ),
               textAlign: TextAlign.center,
             ),
@@ -43,8 +47,22 @@ class EmailVerificationScreen extends StatelessWidget {
 
             // Continue Button
             ElevatedButton(
-              onPressed: () {
-                // Handle the button press
+              onPressed: () async {
+                // Check if email verification is completed
+                User? currentUser = _auth.currentUser;
+                await currentUser?.reload();
+                currentUser = _auth.currentUser;
+
+                if (currentUser?.emailVerified == true) {
+                  // Email verification completed, navigate to home screen
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => HomeScreen()),
+                  );
+                } else {
+                  // Email verification not completed, show a message or take appropriate action
+                  print('Email verification is not completed yet.');
+                }
               },
               style: ElevatedButton.styleFrom(
                 primary: Colors.white,

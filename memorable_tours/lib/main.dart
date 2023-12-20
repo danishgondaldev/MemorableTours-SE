@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:memorable_tours/Screens/email_verification.dart';
@@ -5,12 +6,15 @@ import 'package:memorable_tours/Screens/location_description.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'Screens/onboarding_page.dart';
 import 'Screens/home_page.dart';
+import 'Screens/signup_screen.dart';
 
-void main() {
+void main() async {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
     statusBarColor: Colors.transparent,
     statusBarIconBrightness: Brightness.light,
   ));
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
 
   runApp(MyApp());
 }
@@ -30,7 +34,7 @@ class MyApp extends StatelessWidget {
             } else {
               //return OnboardingScreen();
               //return OnboardingScreen();
-              return EmailVerificationScreen();
+              return SignupScreen();
             }
           } else {
             return Scaffold(
